@@ -69,9 +69,13 @@ body {
 .slide-body {
   position: relative;
   z-index: 2;
-  width: min(90vw, 160vh); /* keeps ~16:9 */
-  max-width: 1100px;
-  padding: 48px 56px;
+  width: min(92vw, 165vh); /* keeps ~16:9 */
+  max-width: 1200px;
+  height: 85vh;
+  padding: 40px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .center-body {
@@ -359,8 +363,10 @@ body {
 .beach-row {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 10px;
-  margin-top: 20px;
+  gap: 12px;
+  margin-top: 24px;
+  flex: 1;
+  align-content: center;
 }
 
 .bc {
@@ -370,21 +376,21 @@ body {
   box-shadow: var(--shadow);
 }
 .bc img {
-  width: 100%; height: 100px;
+  width: 100%; height: 200px;
   object-fit: cover;
 }
 .bc-info {
-  padding: 8px 10px;
+  padding: 10px 12px;
 }
-.bc-info strong { display: block; font-size: 0.78rem; }
-.bc-info span { font-size: 0.68rem; color: var(--muted); }
+.bc-info strong { display: block; font-size: 0.88rem; }
+.bc-info span { font-size: 0.75rem; color: var(--muted); }
 .bc-info em {
   display: block;
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   font-style: normal;
   font-weight: 600;
   color: var(--accent);
-  margin-top: 3px;
+  margin-top: 4px;
 }
 
 /* ===== SLIDE 7: Venue ===== */
@@ -447,7 +453,7 @@ body {
   flex-direction: column;
 }
 .act img {
-  width: 100%; height: 110px;
+  width: 100%; height: 150px;
   object-fit: cover;
 }
 .act-placeholder {
