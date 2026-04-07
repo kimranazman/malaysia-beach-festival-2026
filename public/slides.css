@@ -828,7 +828,8 @@ button {
 .story-copy,
 .channel-card p,
 .brand-item p,
-.partner-cloud span {
+.partner-cloud span,
+.partner-note {
   color: var(--muted);
   font-size: 0.84rem;
   line-height: 1.65;
@@ -1021,8 +1022,43 @@ button {
 }
 
 .program-card img {
+  width: 100%;
   height: 220px;
   object-fit: cover;
+}
+
+.program-card-text {
+  padding: 22px;
+  justify-content: flex-end;
+  background:
+    radial-gradient(circle at top right, rgba(245, 125, 89, 0.14), transparent 36%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(235, 245, 242, 0.92));
+}
+
+.program-card-text .program-body {
+  height: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.program-pills {
+  margin-top: auto;
+}
+
+.program-logo-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.program-logo-row img {
+  width: auto;
+  height: 34px;
+  object-fit: contain;
 }
 
 .program-body {
@@ -1076,6 +1112,70 @@ button {
   grid-row: 1 / span 3;
 }
 
+.brand-spotlight {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 16px;
+  padding: 30px;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at top right, rgba(245, 125, 89, 0.26), transparent 34%),
+    linear-gradient(160deg, rgba(43, 111, 115, 0.5), rgba(8, 17, 26, 0.8));
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: var(--shadow-soft);
+}
+
+.brand-spotlight-label {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 34px;
+  align-items: center;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: var(--white);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.brand-spotlight h3 {
+  color: var(--white);
+  font-family: "Syne", sans-serif;
+  font-size: 2.3rem;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+.brand-spotlight p {
+  max-width: 22rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  line-height: 1.72;
+}
+
+.brand-spotlight-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.brand-spotlight-pills span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: var(--white);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
 .logo-card {
   display: flex;
   align-items: center;
@@ -1086,7 +1186,7 @@ button {
 }
 
 .logo-card img {
-  width: 68%;
+  width: 76%;
   max-width: 200px;
   height: auto;
   object-fit: contain;
@@ -1100,6 +1200,126 @@ button {
 
 .partner-block {
   background: rgba(255, 255, 255, 0.92);
+}
+
+.media-logo-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 22px;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(17, 39, 59, 0.08);
+  box-shadow: var(--shadow-soft);
+}
+
+.media-note-dark {
+  position: static;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  color: var(--navy-deep);
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.58;
+}
+
+.mini-logo-grid,
+.logo-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.mini-logo-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.logo-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 12px;
+}
+
+.mini-logo-grid figure,
+.logo-tile {
+  margin: 0;
+  min-height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 10px;
+  border-radius: 18px;
+  background: rgba(17, 39, 59, 0.04);
+  border: 1px solid rgba(17, 39, 59, 0.08);
+  text-align: center;
+}
+
+.mini-logo-grid img,
+.logo-tile img {
+  width: auto;
+  max-width: 100%;
+  max-height: 34px;
+  object-fit: contain;
+}
+
+.mini-logo-grid figcaption,
+.logo-tile figcaption {
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.partner-note {
+  max-width: 38rem;
+}
+
+.partner-intro-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  padding: 26px;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at top right, rgba(245, 125, 89, 0.18), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(239, 229, 209, 0.92));
+  border: 1px solid rgba(17, 39, 59, 0.08);
+  box-shadow: var(--shadow-soft);
+}
+
+.partner-intro-card h3 {
+  color: var(--navy-deep);
+  font-family: "Syne", sans-serif;
+  font-size: 1.7rem;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.partner-intro-card p {
+  color: var(--muted);
+  font-size: 0.83rem;
+  line-height: 1.62;
+}
+
+.partner-mini-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 2px;
+}
+
+.partner-mini-section h4 {
+  color: var(--navy-deep);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.partner-mini-section .mini-logo-grid figure {
+  min-height: 82px;
 }
 
 .partner-block-dark .partner-cloud span {
@@ -1254,6 +1474,10 @@ button {
     grid-row: auto;
   }
 
+  .logo-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .slide-map {
     min-height: 360px;
   }
@@ -1305,7 +1529,9 @@ button {
   .cover-mosaic,
   .visual-column,
   .visual-column-wide,
-  .brand-board {
+  .brand-board,
+  .logo-grid,
+  .mini-logo-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1322,6 +1548,15 @@ button {
   .hero-panel,
   .slide-map {
     min-height: 260px;
+  }
+
+  .brand-spotlight,
+  .partner-intro-card {
+    padding: 24px;
+  }
+
+  .program-logo-row img {
+    height: 30px;
   }
 
   .schedule-item {
