@@ -154,6 +154,55 @@ body {
   margin-bottom: 20px;
 }
 
+/* ===== SLIDE 0: Cover ===== */
+.slide-cover {
+  background: var(--text);
+  color: #fff;
+}
+.cover-badge {
+  display: inline-block;
+  background: var(--lime);
+  color: #111;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 5px 18px;
+  border-radius: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 32px;
+}
+.cover-title {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin-bottom: 28px;
+}
+.cover-divider {
+  width: 48px;
+  height: 3px;
+  background: var(--lime);
+  border-radius: 2px;
+  margin: 0 auto 28px;
+}
+.cover-by {
+  font-size: 0.85rem;
+  opacity: 0.4;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+.cover-company {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--lime);
+  margin-bottom: 20px;
+}
+.cover-date {
+  font-size: 0.85rem;
+  opacity: 0.35;
+}
+
 /* ===== SLIDE 1: Title ===== */
 .slide-title .slide-body {
   color: #fff;
