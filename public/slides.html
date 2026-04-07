@@ -9,6 +9,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="slides.css">
+  <style>
+    .split { flex-direction: row !important; gap: 40px; align-items: center; }
+    .split-img { flex: 1; }
+    .split-img img { width: 100%; height: auto; border-radius: 14px; box-shadow: 0 8px 30px rgba(0,0,0,0.12); max-height: 70vh; object-fit: cover; }
+    .split-text { flex: 1; }
+  </style>
 </head>
 <body>
 
@@ -16,7 +22,7 @@
   <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
 
   <!-- Slide counter -->
-  <div class="slide-counter" id="slideCounter">1 / 15</div>
+  <div class="slide-counter" id="slideCounter">1 / 17</div>
 
   <!-- Navigation hints -->
   <div class="nav-hint nav-hint-left" id="navLeft">
@@ -29,10 +35,10 @@
   <!-- Slide container -->
   <div class="deck" id="deck">
 
-    <!-- ====== SLIDE 0: Cover ====== -->
+    <!-- ====== SLIDE 1: Cover ====== -->
     <section class="slide slide-cover">
       <div class="slide-body center-body">
-        <div class="cover-badge">Proposal</div>
+        <div class="cover-badge">PROPOSAL</div>
         <h1 class="cover-title">Festival Pantai<br>Cuti-Cuti Malaysia<br>MADANI</h1>
         <div class="cover-divider"></div>
         <p class="cover-by">A proposal by</p>
@@ -41,14 +47,14 @@
       </div>
     </section>
 
-    <!-- ====== SLIDE 1: Title ====== -->
+    <!-- ====== SLIDE 2: Hero ====== -->
     <section class="slide slide-title">
       <div class="slide-bg">
         <img src="hero.jpg" alt="" />
       </div>
       <div class="slide-overlay"></div>
       <div class="slide-body">
-        <div class="title-badge">Proposal</div>
+        <div class="title-badge">Visit Malaysia 2026</div>
         <h1>Beach<br>Festival</h1>
         <p class="title-sub">Cuti-Cuti Malaysia MADANI 2026</p>
         <p class="title-desc">A nationwide beach festival initiative across 14 stunning coastlines, supporting Visit Malaysia 2026 with cultural performances, traditional cuisine, handicrafts, and affordable travel for all Malaysians.</p>
@@ -65,87 +71,42 @@
       <div class="title-credit">Prepared by <strong>Talenta Ideas Sdn. Bhd.</strong> &mdash; April 7, 2026</div>
     </section>
 
-    <!-- ====== SLIDE 2: Overview / Quick Stats ====== -->
+    <!-- ====== SLIDE 3: Overview / Objectives (img LEFT) ====== -->
     <section class="slide slide-light">
-      <div class="slide-body">
-        <div class="slide-label">01 &mdash; Overview</div>
-        <h2>Festival at a Glance</h2>
-        <div class="glance-grid">
-          <div class="glance-card accent-card">
-            <div class="gc-header">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-              Festival Guide
+      <div class="slide-body split">
+        <div class="split-img">
+          <img src="img/tropical-beach.jpg" alt="Tropical beach" />
+        </div>
+        <div class="split-text">
+          <div class="slide-label">01 &mdash; Overview</div>
+          <h2 style="font-size:1.8rem">Why This Festival?</h2>
+          <p style="color:#6b6b6b;line-height:1.7;margin-top:12px">A year-long initiative to transform Malaysia's coastlines into vibrant cultural destinations under the Visit Malaysia 2026 campaign.</p>
+          <div style="margin-top:20px;display:flex;flex-direction:column;gap:14px">
+            <div style="display:flex;gap:12px;align-items:flex-start">
+              <span style="background:var(--accent);color:#fff;font-weight:800;font-size:0.75rem;min-width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0">1</span>
+              <div><strong style="font-size:0.9rem">Support Visit Malaysia 2026</strong><p style="font-size:0.82rem;color:#6b6b6b;line-height:1.5;margin-top:2px">Encourage domestic tourism and inspire Malaysians to explore their own country's beautiful coastlines.</p></div>
             </div>
-            <p>Touring <strong>14 beaches</strong> across every Malaysian state from January to December 2026, featuring cultural performances, traditional food, handicrafts, and affordable travel packages.</p>
-          </div>
-          <div class="glance-card">
-            <div class="gc-icon">
-              <div class="mini-sun"></div>
+            <div style="display:flex;gap:12px;align-items:flex-start">
+              <span style="background:var(--accent);color:#fff;font-weight:800;font-size:0.75rem;min-width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0">2</span>
+              <div><strong style="font-size:0.9rem">Affordable Tourism for All</strong><p style="font-size:0.82rem;color:#6b6b6b;line-height:1.5;margin-top:2px">Accessible travel packages targeting suburban communities and B40 groups through Rahmah MADANI.</p></div>
             </div>
-            <div class="gc-big">30&deg;C</div>
-            <div class="gc-label">Tropical & sunny year-round</div>
-          </div>
-          <div class="glance-card">
-            <div class="gc-big">RM 150 <span class="gc-dim">-</span> RM 800</div>
-            <div class="gc-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-            <div class="gc-label">Per person, full experience</div>
-          </div>
-          <div class="glance-card">
-            <div class="gc-title">Family Friendly</div>
-            <div class="gc-sublabel">Peak months: Apr - Jul</div>
-            <div class="gc-chart">
-              <div class="cb"><div class="cf" style="height:30%"></div><span>J</span></div>
-              <div class="cb"><div class="cf" style="height:40%"></div><span>F</span></div>
-              <div class="cb"><div class="cf" style="height:55%"></div><span>M</span></div>
-              <div class="cb hi"><div class="cf" style="height:70%"></div><span>A</span></div>
-              <div class="cb hi"><div class="cf" style="height:85%"></div><span>M</span></div>
-              <div class="cb hi"><div class="cf" style="height:95%"></div><span>J</span></div>
-              <div class="cb hi"><div class="cf" style="height:80%"></div><span>J</span></div>
-              <div class="cb"><div class="cf" style="height:65%"></div><span>A</span></div>
-              <div class="cb"><div class="cf" style="height:75%"></div><span>S</span></div>
-              <div class="cb"><div class="cf" style="height:60%"></div><span>O</span></div>
-              <div class="cb"><div class="cf" style="height:45%"></div><span>N</span></div>
-              <div class="cb"><div class="cf" style="height:50%"></div><span>D</span></div>
+            <div style="display:flex;gap:12px;align-items:flex-start">
+              <span style="background:var(--accent);color:#fff;font-weight:800;font-size:0.75rem;min-width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0">3</span>
+              <div><strong style="font-size:0.9rem">Promote Local Heritage</strong><p style="font-size:0.82rem;color:#6b6b6b;line-height:1.5;margin-top:2px">Showcase community products, traditional cuisines, and local handicrafts at affordable prices.</p></div>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start">
+              <span style="background:var(--accent);color:#fff;font-weight:800;font-size:0.75rem;min-width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0">4</span>
+              <div><strong style="font-size:0.9rem">Unique Beach Attractions</strong><p style="font-size:0.82rem;color:#6b6b6b;line-height:1.5;margin-top:2px">Help rural communities through MADANI Sales while promoting each beach as a distinctive destination.</p></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ====== SLIDE 3: Objectives ====== -->
+    <!-- ====== SLIDE 4: Locations Map (full-width) ====== -->
     <section class="slide slide-light">
       <div class="slide-body">
-        <div class="slide-label">02 &mdash; Objectives</div>
-        <h2>Why This Festival?</h2>
-        <div class="obj-grid">
-          <div class="obj" style="border-top-color:#e74c3c">
-            <div class="obj-num">01</div>
-            <h3>Support Visit Malaysia 2026</h3>
-            <p>Encourage domestic tourism and inspire Malaysians to explore their own country's beautiful coastlines through the national campaign.</p>
-          </div>
-          <div class="obj" style="border-top-color:#f39c12">
-            <div class="obj-num">02</div>
-            <h3>Affordable Tourism for All</h3>
-            <p>Provide accessible travel packages and affordable pricing targeting suburban communities and B40 groups through Rahmah MADANI initiative.</p>
-          </div>
-          <div class="obj" style="border-top-color:#27ae60">
-            <div class="obj-num">03</div>
-            <h3>Promote Local Heritage</h3>
-            <p>Showcase community products, traditional cuisines, and local handicrafts for commercialization at affordable prices supporting local entrepreneurs.</p>
-          </div>
-          <div class="obj" style="border-top-color:#8e44ad">
-            <div class="obj-num">04</div>
-            <h3>Unique Beach Attractions</h3>
-            <p>Help rural communities through MADANI Sales while promoting each unique local beach as a distinctive tourism attraction.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====== SLIDE 4: Map ====== -->
-    <section class="slide slide-light">
-      <div class="slide-body">
-        <div class="slide-label">03 &mdash; Locations</div>
+        <div class="slide-label">02 &mdash; Locations</div>
         <h2>14 Beaches Across Malaysia</h2>
         <p class="slide-sub">Spanning every state from January to December 2026</p>
         <div class="map-slide-wrap">
@@ -154,388 +115,345 @@
       </div>
     </section>
 
-    <!-- ====== SLIDE 5: Beaches 1-7 ====== -->
+    <!-- ====== SLIDE 5: Locations Schedule (schedule LEFT, img RIGHT) ====== -->
     <section class="slide slide-light">
-      <div class="slide-body">
-        <div class="slide-label">03 &mdash; Beaches</div>
-        <h2>Festival Destinations</h2>
-        <div class="beach-row">
-          <div class="bc"><div style="height:200px;background:linear-gradient(135deg,#0ea5e9,#06b6d4);display:flex;align-items:center;justify-content:center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="bc-info"><strong>Port Dickson</strong><span>N. Sembilan</span><em>Jan 30 - Feb 1</em></div></div>
-          <div class="bc"><div style="height:200px;background:linear-gradient(135deg,#f97316,#ea580c);display:flex;align-items:center;justify-content:center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="bc-info"><strong>Batu Ferringhi</strong><span>P. Pinang</span><em>Mar 4 - May 4</em></div></div>
-          <div class="bc"><div style="height:200px;background:linear-gradient(135deg,#8b5cf6,#7c3aed);display:flex;align-items:center;justify-content:center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M2 12c2-3 4-4 6-4s4 4 6 4 4-4 6-4"/><path d="M2 18c2-3 4-4 6-4s4 4 6 4 4-4 6-4"/></svg></div><div class="bc-info"><strong>Pantai Chenang</strong><span>Langkawi</span><em>Apr 24 - 26</em></div></div>
-          <div class="bc"><div style="height:200px;background:linear-gradient(135deg,#10b981,#059669);display:flex;align-items:center;justify-content:center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M2 12c2-3 4-4 6-4s4 4 6 4 4-4 6-4"/><path d="M2 18c2-3 4-4 6-4s4 4 6 4 4-4 6-4"/></svg></div><div class="bc-info"><strong>Bagan Datuk</strong><span>Perak</span><em>May 8 - 10</em></div></div>
-          <div class="bc"><div style="height:200px;background:linear-gradient(135deg,#ec4899,#db2777);display:flex;align-items:center;justify-content:center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="bc-info"><strong>Pantai Irama</strong><span>Kelantan</span><em>May 5 - Jun 7</em></div></div>
-          <div class="bc"><div style="height:200px;background:linear-gradient(135deg,#f59e0b,#d97706);display:flex;align-items:center;justify-content:center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M2 12c2-3 4-4 6-4s4 4 6 4 4-4 6-4"/><path d="M2 18c2-3 4-4 6-4s4 4 6 4 4-4 6-4"/></svg></div><div class="bc-info"><strong>P. Batu Buruk</strong><span>Terengganu</span><em>Jun 26 - 28</em></div></div>
-          <div class="bc"><div style="height:200px;background:linear-gradient(135deg,#6366f1,#4f46e5);display:flex;align-items:center;justify-content:center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="bc-info"><strong>Pantai Sepat</strong><span>Pahang</span><em>Jul 10 - 12</em></div></div>
+      <div class="slide-body split">
+        <div class="split-text">
+          <div class="slide-label">02 &mdash; Schedule</div>
+          <h2 style="font-size:1.8rem">Festival Destinations</h2>
+          <div style="margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:6px 24px;font-size:0.78rem">
+            <div style="display:flex;justify-content:space-between;gap:8px;padding:5px 0;border-bottom:1px solid var(--border)">
+              <span><strong>N. Sembilan</strong> Port Dickson</span>
+              <span style="color:var(--accent);font-weight:600;white-space:nowrap">Jan 30 - Feb 1</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;gap:8px;padding:5px 0;border-bottom:1px solid var(--border)">
+              <span><strong>Pahang</strong> Pantai Sepat</span>
+              <span style="color:var(--accent);font-weight:600;white-space:nowrap">Jul 10 - 12</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;gap:8px;padding:5px 0;border-bottom:1px solid var(--border)">
+              <span><strong>P. Pinang</strong> Batu Ferringhi</span>
+              <span style="color:var(--accent);font-weight:600;white-space:nowrap">Mar 4 - 6</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;gap:8px;padding:5px 0;border-bottom:1px solid var(--border)">
+              <span><strong>Sabah</strong> Tg. Lipat</span>
+              <span style="color:var(--accent);font-weight:600;white-space:nowrap">Jul 31 - Aug 2</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;gap:8px;padding:5px 0;border-bottom:1px solid var(--border)">
+              <span><strong>Perlis</strong> Pantai K. Perlis</span>
+              <span style="color:var(--accent);font-weight:600;white-space:nowrap">Apr 9 - 11</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;gap:8px;padding:5px 0;border-bottom:1px solid var(--border)">
+              <span><strong>Sarawak</strong> Tg. Batu</span>
+              <span style="color:var(--accent);font-weight:600;white-space:nowrap">Aug 21 - 23</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;gap:8px;padding:5px 0;border-bottom:1px solid var(--border)">
+              <span><strong>Langkawi</strong> Pantai Chenang</span>
+              <span style="color:var(--accent);font-weight:600;white-space:nowrap">Apr 24 - 26</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;gap:8px;padding:5px 0;border-bottom:1px solid var(--border)">
+              <span><strong>Johor</strong> Desaru</span>
+              <span style="color:var(--accent);font-weight:600;white-space:nowrap">Sep 18 - 20</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;gap:8px;padding:5px 0;border-bottom:1px solid var(--border)">
+              <span><strong>Kelantan</strong> Pantai Irama</span>
+              <span style="color:var(--accent);font-weight:600;white-space:nowrap">May 5 - 7</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;gap:8px;padding:5px 0;border-bottom:1px solid var(--border)">
+              <span><strong>Selangor</strong> Pantai Morib</span>
+              <span style="color:var(--accent);font-weight:600;white-space:nowrap">Oct 23 - 25</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;gap:8px;padding:5px 0;border-bottom:1px solid var(--border)">
+              <span><strong>Perak</strong> Bagan Datuk</span>
+              <span style="color:var(--accent);font-weight:600;white-space:nowrap">May 8 - 10</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;gap:8px;padding:5px 0;border-bottom:1px solid var(--border)">
+              <span><strong>Melaka</strong> Klebang</span>
+              <span style="color:var(--accent);font-weight:600;white-space:nowrap">Nov 13 - 15</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;gap:8px;padding:5px 0;border-bottom:1px solid var(--border)">
+              <span><strong>Terengganu</strong> Batu Buruk</span>
+              <span style="color:var(--accent);font-weight:600;white-space:nowrap">Jun 26 - 28</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;gap:8px;padding:5px 0;border-bottom:1px solid var(--border)">
+              <span><strong>Sarawak</strong> Pantai Damai</span>
+              <span style="color:var(--accent);font-weight:600;white-space:nowrap">Dec 11 - 13</span>
+            </div>
+          </div>
+        </div>
+        <div class="split-img">
+          <img src="img/langkawi-beach.jpg" alt="Langkawi beach" />
         </div>
       </div>
     </section>
 
-    <!-- ====== SLIDE 6: Beaches 8-14 ====== -->
+    <!-- ====== SLIDE 6: Venue Setup (img LEFT) ====== -->
     <section class="slide slide-light">
-      <div class="slide-body">
-        <div class="slide-label">03 &mdash; Beaches (continued)</div>
-        <h2>Festival Destinations</h2>
-        <div class="beach-row">
-          <div class="bc"><div style="height:200px;background:linear-gradient(135deg,#14b8a6,#0d9488);display:flex;align-items:center;justify-content:center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M2 12c2-3 4-4 6-4s4 4 6 4 4-4 6-4"/><path d="M2 18c2-3 4-4 6-4s4 4 6 4 4-4 6-4"/></svg></div><div class="bc-info"><strong>P. Tg. Lipat</strong><span>Sabah</span><em>Jul 31 - Aug 2</em></div></div>
-          <div class="bc"><div style="height:200px;background:linear-gradient(135deg,#e11d48,#be123c);display:flex;align-items:center;justify-content:center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="bc-info"><strong>P. Tg. Batu</strong><span>Sarawak</span><em>Aug 21 - 23</em></div></div>
-          <div class="bc"><div style="height:200px;background:linear-gradient(135deg,#a855f7,#9333ea);display:flex;align-items:center;justify-content:center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M2 12c2-3 4-4 6-4s4 4 6 4 4-4 6-4"/><path d="M2 18c2-3 4-4 6-4s4 4 6 4 4-4 6-4"/></svg></div><div class="bc-info"><strong>P. Kuala Perlis</strong><span>Perlis</span><em>Apr 9 - Jun 9</em></div></div>
-          <div class="bc"><div style="height:200px;background:linear-gradient(135deg,#0ea5e9,#0284c7);display:flex;align-items:center;justify-content:center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="bc-info"><strong>Desaru</strong><span>Johor</span><em>Sep 18 - 20</em></div></div>
-          <div class="bc"><div style="height:200px;background:linear-gradient(135deg,#f97316,#c2410c);display:flex;align-items:center;justify-content:center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M2 12c2-3 4-4 6-4s4 4 6 4 4-4 6-4"/><path d="M2 18c2-3 4-4 6-4s4 4 6 4 4-4 6-4"/></svg></div><div class="bc-info"><strong>Pantai Morib</strong><span>Selangor</span><em>Oct 23 - 25</em></div></div>
-          <div class="bc"><div style="height:200px;background:linear-gradient(135deg,#84cc16,#65a30d);display:flex;align-items:center;justify-content:center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="bc-info"><strong>Klebang</strong><span>Melaka</span><em>Nov 13 - 15</em></div></div>
-          <div class="bc"><div style="height:200px;background:linear-gradient(135deg,#06b6d4,#0891b2);display:flex;align-items:center;justify-content:center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M2 12c2-3 4-4 6-4s4 4 6 4 4-4 6-4"/><path d="M2 18c2-3 4-4 6-4s4 4 6 4 4-4 6-4"/></svg></div><div class="bc-info"><strong>Pantai Damai</strong><span>Sarawak</span><em>Dec 11 - 13</em></div></div>
+      <div class="slide-body split">
+        <div class="split-img">
+          <img src="img/event-tents.jpg" alt="Event tents" />
         </div>
-      </div>
-    </section>
-
-    <!-- ====== SLIDE 7: Program - Venue ====== -->
-    <section class="slide slide-light">
-      <div class="slide-body">
-        <div class="slide-label">04 &mdash; Program</div>
-        <h2>Festival Site Layout</h2>
-        <div class="venue-split">
-          <div class="venue-left">
-            <p class="venue-desc">Each festival location features a carefully designed layout to ensure a vibrant, organized, and memorable experience for all visitors.</p>
-            <div class="venue-list">
-              <div class="vl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Main Performance Stage</div>
-              <div class="vl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> VM2026 Pavilion &amp; VIP Lounge</div>
-              <div class="vl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Exhibitor &amp; Craft Tents (A-frame)</div>
-              <div class="vl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Food Vendor Area (10'x10')</div>
-              <div class="vl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Rahmah MADANI Sales Zone</div>
-              <div class="vl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Instagrammable Photo Spots</div>
-              <div class="vl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Neon Lighting &amp; Decor</div>
-              <div class="vl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Family Picnic Zones</div>
-            </div>
-          </div>
-          <div class="venue-right" style="background:url('https://images.unsplash.com/photo-1540541338287-41700207dee6?w=800&q=80&auto=format&fit=crop') center/cover;min-height:340px;border-radius:14px"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====== SLIDE 8: Program - Activities ====== -->
-    <section class="slide slide-light">
-      <div class="slide-body">
-        <div class="slide-label">04 &mdash; Activities</div>
-        <h2>What's Happening</h2>
-        <div class="act-grid">
-          <div class="act">
-            <div style="height:150px;background:linear-gradient(135deg,#f97316,#ea580c);display:flex;align-items:center;justify-content:center"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
-            <div class="act-body">
-              <span class="act-tag">Food &amp; Culture</span>
-              <strong>Traditional Food Bazaar</strong>
-              <p>Nasi lemak, satay, laksa, keropok lekor &mdash; all at Rahmah MADANI affordable prices.</p>
-            </div>
-          </div>
-          <div class="act">
-            <div style="height:150px;background:linear-gradient(135deg,#8b5cf6,#7c3aed);display:flex;align-items:center;justify-content:center"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/><path d="M8 6l1 2"/><path d="M16 6l-1 2"/><path d="M12 2v2"/></svg></div>
-            <div class="act-body">
-              <span class="act-tag">Entertainment</span>
-              <strong>Cultural Performances</strong>
-              <p>Traditional dances from various ethnic groups celebrating Malaysia's cultural diversity.</p>
-            </div>
-          </div>
-          <div class="act">
-            <div style="height:150px;background:linear-gradient(135deg,#ec4899,#db2777);display:flex;align-items:center;justify-content:center"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div>
-            <div class="act-body">
-              <span class="act-tag">Art &amp; Craft</span>
-              <strong>Handicraft Village</strong>
-              <p>Watch artisans create traditional crafts live and take home unique handmade souvenirs.</p>
-            </div>
-          </div>
-          <div class="act">
-            <div style="height:150px;background:linear-gradient(135deg,#10b981,#059669);display:flex;align-items:center;justify-content:center"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><circle cx="12" cy="5" r="3"/><path d="M12 8v4"/><path d="M6.5 22l3-7.5h5l3 7.5"/><path d="M8 12h8"/></svg></div>
-            <div class="act-body">
-              <span class="act-tag">Sports</span>
-              <strong>Fun Run</strong>
-              <p>Beachside fun run with local delicacy checkpoints &mdash; cekodok, keropok lekor, kuih.</p>
-            </div>
-          </div>
-          <div class="act">
-            <div style="height:150px;background:linear-gradient(135deg,#0ea5e9,#0284c7);display:flex;align-items:center;justify-content:center"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
-            <div class="act-body">
-              <span class="act-tag">Shopping</span>
-              <strong>Rahmah Sales</strong>
-              <p>Affordable goods and travel packages for all communities, especially B40 groups.</p>
-            </div>
-          </div>
-          <div class="act">
-            <div style="height:150px;background:linear-gradient(135deg,#f59e0b,#d97706);display:flex;align-items:center;justify-content:center"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.82-.13 2.67-.36"/><path d="M17 17l3-3-3-3"/><path d="M20 14h-8"/><circle cx="12" cy="8" r="2"/></svg></div>
-            <div class="act-body">
-              <span class="act-tag">Shows</span>
-              <strong>Magic &amp; Fire Performances</strong>
-              <p>Spectacular magic shows and fire-eating acts plus live busker performances at sunset.</p>
-            </div>
-          </div>
-          <div class="act">
-            <div style="height:150px;background:linear-gradient(135deg,#14b8a6,#0d9488);display:flex;align-items:center;justify-content:center"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
-            <div class="act-body">
-              <span class="act-tag">Heritage</span>
-              <strong>Traditional Games</strong>
-              <p>Congkak, gasing, wau, sepak takraw &mdash; relive the traditional kampung games of Malaysia.</p>
-            </div>
-          </div>
-          <div class="act">
-            <div style="height:150px;background:linear-gradient(135deg,#e11d48,#be123c);display:flex;align-items:center;justify-content:center"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
-            <div class="act-body">
-              <span class="act-tag">Sports</span>
-              <strong>Community Sports</strong>
-              <p>Beach volleyball, beach soccer, tug-of-war, and relay races for the whole family.</p>
-            </div>
-          </div>
-          <div class="act">
-            <div style="height:150px;background:linear-gradient(135deg,#a855f7,#9333ea);display:flex;align-items:center;justify-content:center"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
-            <div class="act-body">
-              <span class="act-tag">Mascots</span>
-              <strong>Mascots Wira &amp; Manja</strong>
-              <p>Meet the official festival mascots &mdash; the friendly turtle Wira and playful crab Manja!</p>
-            </div>
+        <div class="split-text">
+          <div class="slide-label">03 &mdash; Venue</div>
+          <h2 style="font-size:1.8rem">Festival Site Layout</h2>
+          <p style="color:#6b6b6b;line-height:1.7;margin-top:12px">Each festival location features a carefully designed layout to ensure a vibrant, organized, and memorable experience for all visitors.</p>
+          <div style="margin-top:20px;display:flex;flex-direction:column;gap:10px">
+            <div class="vl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Main Performance Stage</div>
+            <div class="vl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> VM2026 Pavilion &amp; VIP Lounge</div>
+            <div class="vl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Exhibitor Tents (A-frame)</div>
+            <div class="vl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Food Vendor Area (10'x10')</div>
+            <div class="vl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Instagrammable Photo Spots</div>
+            <div class="vl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Neon Lighting &amp; Decor</div>
+            <div class="vl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Family Picnic Zones</div>
+            <div class="vl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Batik Canopies</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ====== SLIDE 9: More Activities ====== -->
+    <!-- ====== SLIDE 7: Venue Details (text LEFT, img RIGHT) ====== -->
     <section class="slide slide-light">
-      <div class="slide-body">
-        <div class="slide-label">04 &mdash; More Activities</div>
-        <h2>More to Explore</h2>
-        <div class="act-grid">
-          <div class="act">
-            <div style="height:150px;background:linear-gradient(135deg,#f97316,#f59e0b);display:flex;align-items:center;justify-content:center"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
-            <div class="act-body">
-              <span class="act-tag">Kids</span>
-              <strong>Soopa Doopa Kids Zone</strong>
-              <p>Dedicated children's play area with inflatables, face painting, sand castle competitions, and interactive games.</p>
+      <div class="slide-body split">
+        <div class="split-text">
+          <div class="slide-label">03 &mdash; Venue Details</div>
+          <h2 style="font-size:1.8rem">Pavilion, Tents &amp; Utilities</h2>
+          <p style="color:#6b6b6b;line-height:1.7;margin-top:12px"><strong style="color:var(--text)">VM2026 Pavilion</strong> &mdash; 20'x20' Arabian tent with VM2026 branding, information counter, and connected modular VIP lounge for government officials and sponsors.</p>
+          <p style="color:#6b6b6b;line-height:1.7;margin-top:12px"><strong style="color:var(--text)">Exhibitor Tents</strong> &mdash; A-frame tents with custom facades and decorations for exhibitors, handicraft vendors, and community product displays.</p>
+          <p style="color:#6b6b6b;line-height:1.7;margin-top:12px"><strong style="color:var(--text)">Food Vendor Tents</strong> &mdash; 10'x10' tents with proper food-safe setups, organized in dedicated food court zones at every location.</p>
+          <p style="color:#6b6b6b;line-height:1.7;margin-top:12px"><strong style="color:var(--text)">Power &amp; Utilities</strong> &mdash; Generator sets, portable toilets with cleaning service, RORO bins, 120L waste bins, and various picnic table styles for families.</p>
+        </div>
+        <div class="split-img">
+          <img src="img/festival-venue.jpg" alt="Festival venue" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SLIDE 8: Food & Sales (img LEFT) ====== -->
+    <section class="slide slide-light">
+      <div class="slide-body split">
+        <div class="split-img">
+          <img src="img/food-spread.jpg" alt="Food spread" />
+        </div>
+        <div class="split-text">
+          <div class="slide-label">04 &mdash; Program</div>
+          <h2 style="font-size:1.8rem">Food &amp; Sales</h2>
+          <p style="color:#6b6b6b;line-height:1.7;margin-top:12px"><strong style="color:var(--text)">Traditional Food Bazaar</strong><br>Nasi lemak, satay, laksa, keropok lekor, and more &mdash; all at Rahmah MADANI affordable prices. 10'x10' vendor tents with proper food-safe setups at every location.</p>
+          <p style="color:#6b6b6b;line-height:1.7;margin-top:16px"><strong style="color:var(--text)">Rahmah MADANI Sales Market</strong><br>Affordable goods and travel packages for all communities, especially B40 groups. A dedicated 20'x20' sales area featuring subsidized products from corporate partners including MYDIN, Gardenia, Farm Fresh, and more.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SLIDE 9: Culture & Entertainment (text LEFT, img RIGHT) ====== -->
+    <section class="slide slide-light">
+      <div class="slide-body split">
+        <div class="split-text">
+          <div class="slide-label">04 &mdash; Entertainment</div>
+          <h2 style="font-size:1.8rem">Culture &amp; Entertainment</h2>
+          <p style="color:#6b6b6b;line-height:1.7;margin-top:12px"><strong style="color:var(--text)">Cultural Performances</strong><br>Traditional dances from various ethnic groups celebrating Malaysia's cultural diversity, performed on the main stage throughout each festival day.</p>
+          <p style="color:#6b6b6b;line-height:1.7;margin-top:16px"><strong style="color:var(--text)">Magic &amp; Fire Shows</strong><br>Spectacular magic shows and fire-eating acts that light up the beach at sunset, creating unforgettable evening entertainment for all ages.</p>
+          <p style="color:#6b6b6b;line-height:1.7;margin-top:16px"><strong style="color:var(--text)">Port Buskers</strong><br>Live busker performances featuring local musicians, singers, and street artists creating a vibrant atmosphere along the beachfront.</p>
+        </div>
+        <div class="split-img">
+          <img src="img/festival-crowd.jpg" alt="Festival crowd" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SLIDE 10: Sports & Activities (img LEFT) ====== -->
+    <section class="slide slide-light">
+      <div class="slide-body split">
+        <div class="split-img">
+          <img src="img/fun-run.jpg" alt="Fun run" />
+        </div>
+        <div class="split-text">
+          <div class="slide-label">04 &mdash; Activities</div>
+          <h2 style="font-size:1.8rem">Sports &amp; Activities</h2>
+          <p style="color:#6b6b6b;line-height:1.7;margin-top:12px"><strong style="color:var(--text)">Beachside Fun Run</strong><br>A fun run with local delicacy checkpoints along the route &mdash; cekodok, keropok lekor, kuih, and more. Participants get to taste Malaysia's best street food while staying active.</p>
+          <p style="color:#6b6b6b;line-height:1.7;margin-top:16px"><strong style="color:var(--text)">Handicraft Demonstrations</strong><br>Watch artisans create traditional crafts live &mdash; batik painting, songket weaving, wood carving, and more. Take home unique handmade souvenirs.</p>
+          <p style="color:#6b6b6b;line-height:1.7;margin-top:16px"><strong style="color:var(--text)">Community Sports (Sukan Rakyat)</strong><br>Tug of war, sack race, beach volleyball, beach soccer, and relay races for the whole family at every festival stop.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SLIDE 11: Kids & Family (text LEFT, img RIGHT) ====== -->
+    <section class="slide slide-light">
+      <div class="slide-body split">
+        <div class="split-text">
+          <div class="slide-label">04 &mdash; Kids &amp; Family</div>
+          <h2 style="font-size:1.8rem">Kids &amp; Family Zone</h2>
+          <p style="color:#6b6b6b;line-height:1.7;margin-top:12px"><strong style="color:var(--text)">Traditional Games</strong><br>Face painting, congkak, gasing, wau, balloon art, sand castle competitions &mdash; relive the traditional kampung games of Malaysia. Interactive heritage activities for children of all ages.</p>
+          <p style="color:#6b6b6b;line-height:1.7;margin-top:16px"><strong style="color:var(--text)">Soopa Doopa Kids Zone</strong><br>Dedicated children's play area featuring bouncy castles, inflatable slides, and giant play structures. A safe, supervised space where kids can have endless fun while parents enjoy the festival.</p>
+        </div>
+        <div class="split-img">
+          <img src="img/kids-playing.jpg" alt="Kids playing" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SLIDE 12: Competitions & Coffee (img LEFT) ====== -->
+    <section class="slide slide-light">
+      <div class="slide-body split">
+        <div class="split-img">
+          <img src="img/cooking.jpg" alt="Cooking competition" />
+        </div>
+        <div class="split-text">
+          <div class="slide-label">04 &mdash; Competitions</div>
+          <h2 style="font-size:1.8rem">Competitions &amp; Coffee</h2>
+          <p style="color:#6b6b6b;line-height:1.7;margin-top:12px"><strong style="color:var(--text)">Kampung Cooking Competition</strong><br>Traditional cooking showdown sponsored by Saji, Adabi, Mak Siti, and MYDIN. Local home cooks compete to create the best kampung-style dishes using traditional recipes.</p>
+          <p style="color:#6b6b6b;line-height:1.7;margin-top:16px"><strong style="color:var(--text)">Village Barista Competition</strong><br>Local baristas compete to brew the best traditional and modern coffee creations. A celebration of Malaysia's rich coffee culture from kopitiam to contemporary.</p>
+          <p style="color:#6b6b6b;line-height:1.7;margin-top:16px"><strong style="color:var(--text)">Kopi-Kopi Korner</strong><br>Premium coffee experience sponsored by ZUS Coffee, Alicafe, and Old Town White Coffee. The perfect spot to relax and recharge between festival activities.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SLIDE 13: Mascots & Branding (text LEFT, img RIGHT) ====== -->
+    <section class="slide slide-light">
+      <div class="slide-body split">
+        <div class="split-text">
+          <div class="slide-label">05 &mdash; Branding</div>
+          <h2 style="font-size:1.8rem">Mascots &amp; Branding</h2>
+          <p style="color:#6b6b6b;line-height:1.7;margin-top:12px"><strong style="color:var(--text)">Mascots Wira &amp; Manja</strong><br>Meet the official festival sun bear mascots! Roaming meet-and-greets, photo ops, and special mascot dance performances daily at every location.</p>
+          <p style="color:#6b6b6b;line-height:1.7;margin-top:16px"><strong style="color:var(--text)">Instagrammable Spots</strong><br>Curated photo zones featuring #VM2026 letter signs, neon palm trees, welcome arches, batik walls, and themed backdrops. Designed for maximum social media sharing.</p>
+          <p style="color:#6b6b6b;line-height:1.7;margin-top:16px"><strong style="color:var(--text)">Batik Branding &amp; Decor</strong><br>Batik canopy covers, triangular bunting, string lights, VM2026 beach flags, and picnic table setups creating a warm, festive kampung atmosphere by the sea.</p>
+        </div>
+        <div class="split-img">
+          <img src="img/sun-bear.jpg" alt="Sun bear mascot" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SLIDE 14: Promotion Plan (img LEFT) ====== -->
+    <section class="slide slide-light">
+      <div class="slide-body split">
+        <div class="split-img">
+          <img src="img/social-media.jpg" alt="Social media" />
+        </div>
+        <div class="split-text">
+          <div class="slide-label">06 &mdash; Promotion</div>
+          <h2 style="font-size:1.8rem">Promotion Plan</h2>
+          <div style="margin-top:16px;display:flex;flex-direction:column;gap:16px">
+            <div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e11d48" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                <strong style="font-size:0.9rem">RTM Radio Outside Broadcast</strong>
+              </div>
+              <p style="font-size:0.82rem;color:#6b6b6b;line-height:1.5;padding-left:28px">Live radio broadcasting from every festival location, reaching millions of listeners nationwide.</p>
             </div>
-          </div>
-          <div class="act">
-            <div style="height:150px;background:linear-gradient(135deg,#6366f1,#4f46e5);display:flex;align-items:center;justify-content:center"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
-            <div class="act-body">
-              <span class="act-tag">Beverages</span>
-              <strong>Kopi-Kopi Korner</strong>
-              <p>Premium coffee experience sponsored by ZUS Coffee, Alicafe, and Old Town White Coffee.</p>
+            <div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="1.5"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+                <strong style="font-size:0.9rem">Banner &amp; Bunting</strong>
+              </div>
+              <p style="font-size:0.82rem;color:#6b6b6b;line-height:1.5;padding-left:28px">Strategic VM2026-branded banners at all 14 venues, surrounding areas, and key transit routes.</p>
             </div>
-          </div>
-          <div class="act">
-            <div style="height:150px;background:linear-gradient(135deg,#e11d48,#be123c);display:flex;align-items:center;justify-content:center"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
-            <div class="act-body">
-              <span class="act-tag">Competition</span>
-              <strong>Kampung Cooking Competition</strong>
-              <p>Traditional cooking showdown sponsored by Saji, Adabi, Rempah Mak Siti, and MYDIN.</p>
+            <div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                <strong style="font-size:0.9rem">Digital Media</strong>
+              </div>
+              <p style="font-size:0.82rem;color:#6b6b6b;line-height:1.5;padding-left:28px">Full-spectrum campaigns across Facebook, X (Twitter), TikTok, and YouTube with live streams.</p>
             </div>
-          </div>
-          <div class="act">
-            <div style="height:150px;background:linear-gradient(135deg,#10b981,#059669);display:flex;align-items:center;justify-content:center"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><path d="M6 1v4"/><path d="M10 1v4"/><path d="M14 1v4"/></svg></div>
-            <div class="act-body">
-              <span class="act-tag">Competition</span>
-              <strong>Village Barista Competition</strong>
-              <p>Local baristas compete to brew the best traditional and modern coffee creations.</p>
-            </div>
-          </div>
-          <div class="act">
-            <div style="height:150px;background:linear-gradient(135deg,#ec4899,#db2777);display:flex;align-items:center;justify-content:center"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
-            <div class="act-body">
-              <span class="act-tag">Photo</span>
-              <strong>Instagrammable Spots</strong>
-              <p>Curated photo zones with neon lights, batik walls, beach swings, and themed backdrops.</p>
-            </div>
-          </div>
-          <div class="act">
-            <div style="height:150px;background:linear-gradient(135deg,#a855f7,#9333ea);display:flex;align-items:center;justify-content:center"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
-            <div class="act-body">
-              <span class="act-tag">Mascots</span>
-              <strong>Mascots Wira &amp; Manja</strong>
-              <p>Roaming mascot meet-and-greets, photo ops, and special mascot dance performances daily.</p>
+            <div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                <strong style="font-size:0.9rem">Influencers</strong>
+              </div>
+              <p style="font-size:0.82rem;color:#6b6b6b;line-height:1.5;padding-left:28px">Malaysian travel, food, and lifestyle content creators producing authentic content at every stop.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ====== SLIDE 10: Promotion Plan ====== -->
-    <section class="slide slide-light">
-      <div class="slide-body">
-        <div class="slide-label">04 &mdash; Promotion</div>
-        <h2>Promotion Plan</h2>
-        <div class="obj-grid">
-          <div class="obj" style="border-top-color:#e11d48">
-            <div class="obj-num" style="color:#e11d48"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#e11d48" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></div>
-            <h3>RTM Radio Outside Broadcast</h3>
-            <p>Live radio broadcasting from every festival location via RTM network, reaching millions of listeners nationwide with real-time event coverage and interviews.</p>
-          </div>
-          <div class="obj" style="border-top-color:#f97316">
-            <div class="obj-num" style="color:#f97316"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="1.5"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg></div>
-            <h3>Banner &amp; Bunting</h3>
-            <p>Strategic placement of VM2026-branded banners, bunting, and beach flags at all 14 festival venues, surrounding areas, and key transit routes.</p>
-          </div>
-          <div class="obj" style="border-top-color:#8b5cf6">
-            <div class="obj-num" style="color:#8b5cf6"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-            <h3>Digital Media</h3>
-            <p>Full-spectrum digital campaigns across Facebook, X (Twitter), TikTok, and YouTube with event teasers, live streams, and user-generated content strategies.</p>
-          </div>
-          <div class="obj" style="border-top-color:#10b981">
-            <div class="obj-num" style="color:#10b981"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
-            <h3>Influencers</h3>
-            <p>Partnering with Malaysian travel, food, and lifestyle influencers to create authentic content and drive social media awareness at every festival stop.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====== SLIDE 11: Facilities ====== -->
-    <section class="slide slide-light">
-      <div class="slide-body">
-        <div class="slide-label">05 &mdash; Facilities</div>
-        <h2>Venue &amp; Infrastructure</h2>
-        <div class="fac-grid">
-          <div class="fac">
-            <div class="fac-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-            <strong>VM2026 Pavilion</strong>
-            <p>20'x20' Arabian tent with VM2026 branding, info counter, connected modular VIP lounge</p>
-          </div>
-          <div class="fac">
-            <div class="fac-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
-            <strong>Exhibitor Tents</strong>
-            <p>A-frame tents with facade and decorations for exhibitors and handicraft vendors</p>
-          </div>
-          <div class="fac">
-            <div class="fac-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
-            <strong>Food Vendor Area</strong>
-            <p>10'x10' tents for food vendors plus 20'x20' dedicated Rahmah MADANI sales area</p>
-          </div>
-          <div class="fac">
-            <div class="fac-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-            <strong>Power &amp; Utilities</strong>
-            <p>Generator sets, portable toilets with cleaning service, RORO bins and 120L waste bins</p>
-          </div>
-          <div class="fac">
-            <div class="fac-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg></div>
-            <strong>Branding &amp; Decor</strong>
-            <p>VM2026 beach flags, batik canopy covers, triangular bunting, string lights, neon installations</p>
-          </div>
-          <div class="fac">
-            <div class="fac-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
-            <strong>Family Zones</strong>
-            <p>Various picnic table styles for families to relax, dine, and enjoy the festival atmosphere</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====== SLIDE 12: Calendar ====== -->
-    <section class="slide slide-light">
-      <div class="slide-body">
-        <div class="slide-label">06 &mdash; Calendar</div>
-        <h2>Festival Schedule 2026</h2>
-        <div class="cal-table">
-          <div class="cal-row cal-header">
-            <div class="cal-cell">State</div>
-            <div class="cal-cell">Beach</div>
-            <div class="cal-cell">Date</div>
-          </div>
-          <div class="cal-row"><div class="cal-cell">Negeri Sembilan</div><div class="cal-cell">Port Dickson</div><div class="cal-cell"><em>Jan 30 - Feb 1</em></div></div>
-          <div class="cal-row"><div class="cal-cell">Pulau Pinang</div><div class="cal-cell">Batu Ferringhi</div><div class="cal-cell"><em>Mar 4 - May 4</em></div></div>
-          <div class="cal-row"><div class="cal-cell">Perlis</div><div class="cal-cell">Pantai K. Perlis</div><div class="cal-cell"><em>Apr 9 - Jun 9</em></div></div>
-          <div class="cal-row"><div class="cal-cell">Kedah</div><div class="cal-cell">Pantai Chenang, Langkawi</div><div class="cal-cell"><em>Apr 24 - Apr 26</em></div></div>
-          <div class="cal-row"><div class="cal-cell">Kelantan</div><div class="cal-cell">Pantai Irama, Bachok</div><div class="cal-cell"><em>May 5 - Jun 7</em></div></div>
-          <div class="cal-row"><div class="cal-cell">Perak</div><div class="cal-cell">Bagan Datuk</div><div class="cal-cell"><em>May 8 - May 10</em></div></div>
-          <div class="cal-row"><div class="cal-cell">Terengganu</div><div class="cal-cell">Pantai Batu Buruk</div><div class="cal-cell"><em>Jun 26 - Jun 28</em></div></div>
-          <div class="cal-row"><div class="cal-cell">Pahang</div><div class="cal-cell">Pantai Sepat</div><div class="cal-cell"><em>Jul 10 - Jul 12</em></div></div>
-          <div class="cal-row"><div class="cal-cell">Sabah</div><div class="cal-cell">Pantai Tg. Lipat</div><div class="cal-cell"><em>Jul 31 - Aug 2</em></div></div>
-          <div class="cal-row"><div class="cal-cell">Sarawak</div><div class="cal-cell">Pantai Tg. Batu, Bintulu</div><div class="cal-cell"><em>Aug 21 - Aug 23</em></div></div>
-          <div class="cal-row"><div class="cal-cell">Johor</div><div class="cal-cell">Desaru</div><div class="cal-cell"><em>Sep 18 - Sep 20</em></div></div>
-          <div class="cal-row"><div class="cal-cell">Selangor</div><div class="cal-cell">Pantai Morib</div><div class="cal-cell"><em>Oct 23 - Oct 25</em></div></div>
-          <div class="cal-row"><div class="cal-cell">Melaka</div><div class="cal-cell">Klebang</div><div class="cal-cell"><em>Nov 13 - Nov 15</em></div></div>
-          <div class="cal-row"><div class="cal-cell">Sarawak</div><div class="cal-cell">Pantai Damai, Santubong</div><div class="cal-cell"><em>Dec 11 - Dec 13</em></div></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====== SLIDE 13: Partners ====== -->
+    <!-- ====== SLIDE 15: Partners - Government & Tourism (full-width) ====== -->
     <section class="slide slide-light">
       <div class="slide-body">
         <div class="slide-label">07 &mdash; Partners</div>
         <h2>Government &amp; Tourism Partners</h2>
-        <div class="partner-section">
-          <h4>Government Agencies</h4>
-          <div class="partner-row">
-            <span>Ministry of Tourism, Arts &amp; Culture</span>
-            <span>Ministry of Domestic Trade &amp; Cost of Living</span>
-            <span>Ministry of Communications</span>
+        <div style="margin-top:20px">
+          <div class="partner-section">
+            <h4>Government Agencies</h4>
+            <div class="partner-row">
+              <span>Ministry of Tourism, Arts &amp; Culture</span>
+              <span>Ministry of Domestic Trade &amp; Cost of Living</span>
+              <span>Ministry of Communications</span>
+            </div>
           </div>
-        </div>
-        <div class="partner-section">
-          <h4>State Tourism Boards</h4>
-          <div class="partner-row">
-            <span>Visit Perlis</span><span>Experience Kedah</span><span>Penang Global Tourism</span>
-            <span>Tourism Perak</span><span>Tourism Selangor</span><span>Kelantan Tourism</span>
-            <span>Tourism Terengganu</span><span>Tourism Pahang</span><span>Visit Johor 2026</span>
-            <span>N. Sembilan Tourism</span><span>Melaka Tourism</span><span>Sarawak Tourism Board</span>
-            <span>Sabah Tourism Board</span>
+          <div class="partner-section">
+            <h4>State Tourism Boards</h4>
+            <div class="partner-row">
+              <span>Visit Perlis</span><span>Experience Kedah</span><span>Penang Global Tourism</span>
+              <span>Tourism Perak</span><span>Tourism Selangor</span><span>Kelantan Tourism</span>
+              <span>Tourism Terengganu</span><span>Tourism Pahang</span><span>Visit Johor 2026</span>
+              <span>N. Sembilan Tourism</span><span>Melaka Tourism</span><span>Sarawak Tourism Board</span>
+              <span>Sabah Tourism Board</span>
+            </div>
           </div>
-        </div>
-        <div class="partner-section">
-          <h4>Strategic Partners</h4>
-          <div class="partner-row">
-            <span>ASWARA</span>
-            <span>JKN</span>
-            <span>RTM</span>
-            <span>Warisan</span>
-            <span>Islamic Tourism Centre</span>
-          </div>
-        </div>
-        <div class="partner-section">
-          <h4>Corporate Partners</h4>
-          <div class="partner-row">
-            <span>MYDIN</span>
-            <span>Saji</span>
-            <span>Mamee</span>
-            <span>ZUS Coffee</span>
-            <span>Farm Fresh</span>
-            <span>Adabi</span>
-            <span>Mak Siti</span>
-            <span>Gardenia</span>
-            <span>Cobizco</span>
-          </div>
-        </div>
-        <div class="partner-section">
-          <h4>Media Partners</h4>
-          <div class="partner-row">
-            <span>RTM</span>
-            <span>RFM Radio</span>
-            <span>TV1</span>
-            <span>Harian Metro</span>
-            <span>JKKN</span>
-          </div>
-        </div>
-        <div class="partner-section">
-          <h4>In Collaboration With</h4>
-          <div class="partner-row">
-            <span>Local Authorities (PBT)</span>
-            <span>Royal Malaysia Police</span>
-            <span>RELA Malaysia</span>
-            <span>Malaysian Red Crescent</span>
+          <div class="partner-section">
+            <h4>In Collaboration With</h4>
+            <div class="partner-row">
+              <span>Local Authorities (PBT)</span><span>Royal Malaysia Police</span><span>RELA Malaysia</span><span>Malaysian Red Crescent</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ====== SLIDE 14: Closing ====== -->
+    <!-- ====== SLIDE 16: Partners - Corporate & Media (text LEFT, img RIGHT) ====== -->
+    <section class="slide slide-light">
+      <div class="slide-body split">
+        <div class="split-text">
+          <div class="slide-label">07 &mdash; Corporate &amp; Media</div>
+          <h2 style="font-size:1.8rem">Corporate &amp; Media Partners</h2>
+          <p style="color:#6b6b6b;line-height:1.7;margin-top:12px">Leading Malaysian brands and media organizations supporting the festival.</p>
+          <div style="margin-top:16px">
+            <h4 style="font-size:0.82rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:var(--text);margin-bottom:10px">Corporate Partners</h4>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+              <span style="background:var(--accent-light);color:var(--accent);padding:8px 18px;border-radius:20px;font-size:0.82rem;font-weight:600">MYDIN</span>
+              <span style="background:var(--accent-light);color:var(--accent);padding:8px 18px;border-radius:20px;font-size:0.82rem;font-weight:600">Saji</span>
+              <span style="background:var(--accent-light);color:var(--accent);padding:8px 18px;border-radius:20px;font-size:0.82rem;font-weight:600">Mamee</span>
+              <span style="background:var(--accent-light);color:var(--accent);padding:8px 18px;border-radius:20px;font-size:0.82rem;font-weight:600">ZUS Coffee</span>
+              <span style="background:var(--accent-light);color:var(--accent);padding:8px 18px;border-radius:20px;font-size:0.82rem;font-weight:600">Farm Fresh</span>
+              <span style="background:var(--accent-light);color:var(--accent);padding:8px 18px;border-radius:20px;font-size:0.82rem;font-weight:600">Adabi</span>
+              <span style="background:var(--accent-light);color:var(--accent);padding:8px 18px;border-radius:20px;font-size:0.82rem;font-weight:600">Mak Siti</span>
+              <span style="background:var(--accent-light);color:var(--accent);padding:8px 18px;border-radius:20px;font-size:0.82rem;font-weight:600">Gardenia</span>
+              <span style="background:var(--accent-light);color:var(--accent);padding:8px 18px;border-radius:20px;font-size:0.82rem;font-weight:600">Cobizco</span>
+              <span style="background:var(--accent-light);color:var(--accent);padding:8px 18px;border-radius:20px;font-size:0.82rem;font-weight:600">Alicafe</span>
+              <span style="background:var(--accent-light);color:var(--accent);padding:8px 18px;border-radius:20px;font-size:0.82rem;font-weight:600">Old Town White Coffee</span>
+            </div>
+          </div>
+          <div style="margin-top:20px">
+            <h4 style="font-size:0.82rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:var(--text);margin-bottom:10px">Media Partners</h4>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+              <span style="background:var(--accent-light);color:var(--accent);padding:8px 18px;border-radius:20px;font-size:0.82rem;font-weight:600">RTM</span>
+              <span style="background:var(--accent-light);color:var(--accent);padding:8px 18px;border-radius:20px;font-size:0.82rem;font-weight:600">RFM Radio</span>
+              <span style="background:var(--accent-light);color:var(--accent);padding:8px 18px;border-radius:20px;font-size:0.82rem;font-weight:600">TV1</span>
+              <span style="background:var(--accent-light);color:var(--accent);padding:8px 18px;border-radius:20px;font-size:0.82rem;font-weight:600">Harian Metro</span>
+              <span style="background:var(--accent-light);color:var(--accent);padding:8px 18px;border-radius:20px;font-size:0.82rem;font-weight:600">JKKN</span>
+            </div>
+          </div>
+        </div>
+        <div class="split-img">
+          <img src="img/partnership.jpg" alt="Partnership" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SLIDE 17: Closing ====== -->
     <section class="slide slide-dark">
       <div class="slide-bg">
-        <img src="https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=1920&q=80&auto=format&fit=crop" alt="" />
+        <img src="img/beach-sunset.jpg" alt="" />
       </div>
       <div class="slide-overlay dark-overlay"></div>
       <div class="slide-body center-body">
         <h2 class="closing-title">Ready to bring Malaysia's<br>beaches to life?</h2>
-        <p class="closing-desc">This proposal outlines a comprehensive, year-long beach festival initiative that will transform 14 Malaysian coastlines into vibrant cultural destinations.</p>
+        <p class="closing-desc">This proposal outlines a comprehensive, year-long beach festival initiative that will transform 14 Malaysian coastlines into vibrant cultural destinations under Visit Malaysia 2026.</p>
         <div class="closing-meta">
           <div class="cm">Prepared by <strong>Talenta Ideas Sdn. Bhd.</strong></div>
           <div class="cm">April 7, 2026</div>
         </div>
         <div class="closing-brand">
           <div class="logo-dot"></div>
-          <span>Malaysia Beach Festival 2026</span>
+          <span>Festival Pantai Cuti-Cuti Malaysia MADANI</span>
         </div>
       </div>
     </section>
