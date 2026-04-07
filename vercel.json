@@ -1,4 +1,8 @@
 {
   "buildCommand": "",
-  "outputDirectory": "public"
+  "outputDirectory": "public",
+  "deploymentProtection": {
+    "preview": "none",
+    "production": "none"
+  }
 }
